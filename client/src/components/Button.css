@@ -18,7 +18,7 @@ cursor: pointer;
 
 .btn--outline {
  background-color: transparent;
- color: #fff;
+ color: rgb(203, 80, 14);
  padding: 8px 20px;
  border: 1px solid var(--primary);
  transition: all 0.3s ease-out;
@@ -36,7 +36,7 @@ cursor: pointer;
 
 .btn--medium:hover,
 .btn--large:hover {
-    background: #fff;
+    background: rgb(226, 17, 17);
     color:#242424;
     transition: all 0.3s ease-out;
 }
