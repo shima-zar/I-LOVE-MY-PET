@@ -2,7 +2,9 @@ import "./App.css";
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Button } from "./components/Button";
+// import { Button } from "./components/Button";
+import Home from "./components/pages/Home";
+
 
 function App() {
   // const [click, setClick] = useState(false);
@@ -23,7 +25,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" exact />
+          <Route path="/" exact components=
+          {Home}/>
         </Routes>
         <Link to="/meow" className="princpal--button">
           {/* {button && <Button buttonStyle="btn--outline">WooF</Button>} */}

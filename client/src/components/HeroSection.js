@@ -10,7 +10,6 @@ function HeroSection() {
       <h1>kitty cat kitty cat</h1>
       <p>hey kitty cat what are you doing on daily base</p>
       <div className="hero-btns">
-        {" "}
         <Button
           className="btns"
           buttonStyle="btn--outline"
