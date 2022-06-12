@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // import { Button } from "./components/Button";
 import Home from "./components/pages/Home";
 
-
 function App() {
   // const [click, setClick] = useState(false);
   // const [button, setButton] = useState(true);
@@ -22,11 +21,11 @@ function App() {
   // };
   return (
     <>
+      <video src="/video/cati.mp4" autoPlay loop muted></video>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" exact components=
-          {Home}/>
+          <Route path="/" exact components={Home} />
         </Routes>
         <Link to="/meow" className="princpal--button">
           {/* {button && <Button buttonStyle="btn--outline">WooF</Button>} */}
