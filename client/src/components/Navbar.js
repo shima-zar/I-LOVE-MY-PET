@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import "./Navbar.css";
@@ -10,6 +10,10 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  // this is for smaller window when is small
+  //or equal to 960 the hamburger menu shows when
+  //is bigger the complete menu shows
+
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -18,13 +22,17 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    showButton();
+  }, []);
+
   window.addEventListener("resize", showButton);
 
   return (
     <>
       <nav className="navbar"></nav>
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           I LOVE MY PET <i className="fab fa-typo3"></i>
         </Link>
         <div className="menu-icon" onClick={handleClick}>
@@ -63,7 +71,7 @@ function Navbar() {
           </li>
         </ul>
         {button && <Button buttonStyle="btn--outline">WooF</Button>}
-        {button && <Button buttonStyle="btn--outline">MeoW</Button>}
+        {/* {button && <Button buttonStyle="btn--outline">MeoW</Button>} */}
       </div>
     </>
   );
